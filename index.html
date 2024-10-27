@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Nearby Restaurants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Favorite Nearby Restaurants</h1>
+        <p>Explore my curated list of restaurants in the area.</p>
+    </header>
+
+    <!-- Main Content Area -->
+    <section class="main-content">
+        <!-- Sidebar with Map Preview and Buttons -->
+        <div class="sidebar">
+            <div class="map-preview">
+                <img src="map-preview.jpg" alt="Map preview">
+            </div>
+            <button class="nav-button" onclick="window.open('https://www.google.com/maps')">Google Restaurants</button>
+            <button class="nav-button" onclick="window.open('https://www.google.com/maps')">Explore Nearby</button>
+            <p>Explore my curated list of restaurants in the area.</p>
+            <div class="map-small">
+                <img src="small-map.jpg" alt="Small map view">
+            </div>
+        </div>
+
+        <!-- Restaurant List Section -->
+        <div class="restaurant-list">
+            <!-- Restaurant Card 1 -->
+            <div class="restaurant-card">
+                <img src="restaurant1.jpg" alt="Restaurant 1">
+                <h2>Restaurant Name 1</h2>
+                <p>★★★★☆</p>
+                <button onclick="window.open('https://www.google.com/maps/place/Restaurant+1')">View on Google Maps</button>
+            </div>
+
+            <!-- Restaurant Card 2 -->
+            <div class="restaurant-card">
+                <img src="restaurant2.jpg" alt="Restaurant 2">
+                <h2>Restaurant Name 2</h2>
+                <p>★★★★☆</p>
+                <button onclick="window.open('https://www.google.com/maps/place/Restaurant+2')">View on Google Maps</button>
+            </div>
+
+            <!-- Additional restaurant cards as needed -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact me with recommendations!</p>
+        <form action="https://example.com/contact">
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Powered by Google Maps</p>
+    </footer>
+
+</body>
+</html>
