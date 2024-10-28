@@ -1,0 +1,114 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Georgia', serif;
+    color: #3e3427;
+    background-image: url("https://raw.githubusercontent.com/gitsumhubs/detroit-food/refs/heads/main/file-0vQBx9HAeuwKbrUZmal8JTtP_1-transformed.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden; /* Prevents the entire page from scrolling */
+    background-blend-mode: overlay; /* Darkens background slightly */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Wrapper to hold both static and scrollable sections */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5); /* Reduced opacity for more background visibility */
+}
+
+/* Left Static Section */
+.left-section {
+    flex: 1;
+    background-color: rgba(245, 242, 235, 0.9); /* Increased opacity for more background fade */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.left-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+.left-section p {
+    font-size: 18px;
+    color: #6b6657;
+}
+
+/* Right Scrollable Section */
+.right-section {
+    flex: 2;
+    overflow-y: auto; /* Makes the right section scrollable */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Lower opacity for background visibility */
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Restaurant Card Styling */
+.content-box {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-box button {
+    padding: 8px 16px;
+    background-color: #6b6657;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.content-box button:hover {
+    background-color: #3e3427;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Stack content boxes in one column */
+    }
+    
+    .left-section {
+        flex: 0.7;
+    }
+    
+    .right-section {
+        flex: 1.3;
+    }
+}
