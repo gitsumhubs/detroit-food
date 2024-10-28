@@ -1,0 +1,149 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Georgia', serif;
+    color: #3e3427;
+    background-image: url("https://raw.githubusercontent.com/gitsumhubs/detroit-food/refs/heads/main/file-0vQBx9HAeuwKbrUZmal8JTtP_1-transformed.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden; /* Prevents the entire page from scrolling */
+    background-blend-mode: overlay; /* Darkens background slightly */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Wrapper to hold both static and scrollable sections */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5); /* Reduced opacity for more background visibility */
+}
+
+/* Left Static Section */
+.left-section {
+    flex: 1;
+    background-color: rgba(245, 242, 235, 0.9); /* Increased opacity for more background fade */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.left-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2f2a26; /* Slightly darker for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.left-section p {
+    font-size: 18px;
+    color: #534e46; /* Darker color for paragraph text */
+}
+
+/* Right Scrollable Section */
+.right-section {
+    flex: 2;
+    overflow-y: auto; /* Makes the right section scrollable */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Lower opacity for background visibility */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for scroll effect */
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Restaurant Card Styling */
+.content-box {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+/* "View on Google Maps" Button Styling */
+.content-box button {
+    padding: 8px 16px;
+    background-color: #6b6657;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.content-box button:hover {
+    background-color: #3e3427;
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .left-section {
+        flex: 0.6;
+        padding: 20px;
+    }
+
+    .right-section {
+        flex: 1.4;
+        padding: 10px;
+    }
+
+    .left-section h1 {
+        font-size: 28px;
+    }
+
+    .left-section p {
+        font-size: 16px;
+    }
+
+    .content-box {
+        padding: 10px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr; /* Stack content boxes in one column */
+    }
+}
+
+/* Additional Breakpoint for Smaller Devices */
+@media (max-width: 480px) {
+    .left-section h1 {
+        font-size: 24px;
+    }
+    
+    .left-section p {
+        font-size: 14px;
+    }
+    
+    .content-box {
+        padding: 8px;
+    }
+}
