@@ -60,10 +60,11 @@ body, html {
     flex: 2;
     overflow-y: auto; /* Makes the right section scrollable */
     padding: 20px;
-    padding-bottom: 20px; /* Extra space at the bottom to prevent cutting off last item */
+    padding-bottom: 40px; /* Increased space at the bottom to prevent cutting off last item */
     background-color: rgba(255, 255, 255, 0.3); /* Lower opacity for background visibility */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for scroll effect */
-    max-height: 100vh; /* Ensures it stays within the viewport height */
+    height: 100vh; /* Ensures it takes the full viewport height */
+    min-height: 100vh; /* Makes sure the height is not less than the viewport */
 }
 
 .content-grid {
@@ -116,6 +117,7 @@ body, html {
     .right-section {
         flex: 1.4;
         padding: 10px;
+        padding-bottom: 40px; /* Ensure extra space at the bottom for mobile too */
     }
 
     .left-section h1 {
